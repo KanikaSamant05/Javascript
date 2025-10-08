@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Visibility</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #toggleParagraph {
+            display: block; /* Show by default */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Toggle Paragraph Visibility</h1>
+<p id="toggleParagraph">This is a paragraph that will be toggled on and off when the button is clicked.</p>
+<button id="toggleButton" onclick="toggleVisibility()">Toggle Paragraph</button>
+
+<script>
+    // Function to toggle visibility of the paragraph
+    function toggleVisibility() {
+        // Get the paragraph element by its ID
+        const paragraph = document.getElementById("toggleParagraph");
+
+        // Check the current display style and toggle it
+        if (paragraph.style.display === "none") {
+            paragraph.style.display = "block"; // Show the paragraph
+        } else {
+            paragraph.style.display = "none"; // Hide the paragraph
+        }
+    }
+</script>
+
+</body>
+</html>
